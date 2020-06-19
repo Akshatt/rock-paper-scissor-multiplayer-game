@@ -3,7 +3,7 @@ from network import Network
 import pickle
 pygame.font.init()
 
-width = 500
+width = 600
 height = 500
 win = pygame.display.set_mode((width, height))
 pygame.display.set_caption("Client")
@@ -16,7 +16,7 @@ class Button:
         self.y = y
         self.color = color
         self.width = 150
-        self.height = 100
+        self.height = 50
 
     def draw(self, win):
         pygame.draw.rect(win, self.color , (self.x, self.y, self.width, self.height))
@@ -81,7 +81,7 @@ def redrawWindow(win, game, p):
     pygame.display.update()
 
 
-btns = [Button("Rock", 50, 300, (0,0,0)), Button("Scissors", 250, 500, (255,0,0)), Button("Paper", 450, 500, (0,255,0))]
+btns = [Button("Rock", 25, 400, (0,0,0)), Button("Scissors", 225, 400, (255,0,0)), Button("Paper", 425, 400, (0,255,0))]
 
 
 def main():
@@ -150,7 +150,7 @@ def menu_screen():
         win.fill((128, 128, 128))
         font = pygame.font.SysFont("comicsans", 60)
         text = font.render("Click to Play!", 1, (255, 0, 0))
-        win.blit(text, (100, 200))
+        win.blit(text, (175, 200))
         pygame.display.update()
 
         for event in pygame.event.get():
